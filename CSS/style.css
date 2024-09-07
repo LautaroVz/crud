@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+h1{
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+ 
+}
+h2{
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+     
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.usuarios_tabla table{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+table th{
+    padding: 16px;
+    text-align: center;
+    font-size: .85em;
+}
+
+.editar_tabla{
+    background: #0fb464;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: black 2px solid;
+}
+.eliminar_tabla{
+    background: #b11e1e;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: black 2px solid;
+}
