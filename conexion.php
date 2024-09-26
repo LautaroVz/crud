@@ -1,16 +1,19 @@
 <?php
 
 // conexion con la BD
-function conexion(){
 
-$host = "localhost";
-$user = "root";
-$contraseña = "";
+$servername = "localhost";
+$username = "root";
+$password = "";
 
-$bd = "crud2";
+$dbname = "crud2";
 
-$conect = mysqli_connect($host, $user,$contraseña);
-mysqli_select_db($conect, $bd);
-return $conect;
-};
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+
 ?>

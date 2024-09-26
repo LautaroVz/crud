@@ -1,14 +1,14 @@
 <?php
 include("conexion.php");
-$con = conexion();
 
 $id= $_GET['id'];
 $sql= "DELETE FROM usuarios WHERE id= '$id'";
 
-$query = mysqli_query($con, $sql);
 
-if($query){
-    header("location:index.php");
+if ($conn->query($sql) === TRUE) {
+    $conn->close();
+header("Location: index2.php");
+        exit();} else {
+    echo "<div class='alert alert-danger'>Error eliminando registro: " . $conn->error . "</div>";
 }
-
 ?>
