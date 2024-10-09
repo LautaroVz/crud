@@ -12,17 +12,21 @@ include("conexion.php");
 // $sql = "SELECT * FROM usuarios WHERE id=$id";
 // $result = $conn->query($sql);
 // $row = $result->fetch_assoc();
+
+// codigo que esta aca arriba no sirve
+
+
 $id = $_POST['id'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
 
 // Actualizar los datos en la base de datos
-$sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', email = '$email' WHERE id = '$id'";
+$sql = "UPDATE usuarios_crud SET nombre = '$nombre', apellido = '$apellido', email = '$email' WHERE id = '$id'";
 
 // Ejecutar la consulta y verificar si fue exitosa
 if ($conn->query($sql) === TRUE) {
-    header("Location: index2.php");  // Redirigir de nuevo a la página principal
+    header("Location: index_crud.php");  // Redirigir de nuevo a la página principal
     exit();
 } else {
     echo "Error actualizando registro: " . $conn->error;

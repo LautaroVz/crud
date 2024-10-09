@@ -1,19 +1,4 @@
 <?php
-// include("conexion.php");
-// $con = conexion();
-
-// // el id deja de ser nulo, porque solo necesitaremos un id en especifico a la vez.
-// $id = $_POST['id']; 
-// $nombre= $_POST['nombre'];
-// $apellido= $_POST['apellido'];
-// $email= $_POST['email'];
-
-// $sql = "UPDATE usuarios SET nombre='$nombre', apellido='$apellido', email='$email' WHERE id= '$id'";
-// $query = mysqli_query($con, $sql);
-
-// if($query){
-//     header("location:index2.php");
-// }
 
 
 include("conexion.php");
@@ -22,7 +7,7 @@ include("conexion.php");
 $id = $_GET['id'];
 
 // Consultar los datos del usuario
-$sql = "SELECT * FROM usuarios WHERE id = '$id'";
+$sql = "SELECT * FROM usuarios_crud WHERE id = '$id'";
 $result = $conn->query($sql);
 
 // Verificar si el usuario existe
